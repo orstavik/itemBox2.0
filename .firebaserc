@@ -1,5 +1,9 @@
 {
   "projects": {
+<<<<<<< HEAD
     "default": "summer-on-firebase"
+=======
+    "default": "robotpad-762de"
+>>>>>>> 1f2204404ccfdaf3a73b387ec314699dc3021a38
   }
 }

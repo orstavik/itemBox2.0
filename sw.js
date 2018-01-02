@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Names of the two caches used in this version of the service worker.
 // Change to v2, etc. when you update any of the local resources, which will
 // in turn trigger the install event again.
@@ -59,3 +60,13 @@ self.addEventListener('fetch', event => {
     );
   }
 });
+=======
+importScripts('/src/js/sw-lib.min.js');
+const cdnCacheStrategy = goog.swlib.cacheFirst({cacheableResponse: {statuses: [0]}});
+goog.swlib.router.registerRoute(new RegExp('^https://cdn.jsdelivr.net/lodash'), cdnCacheStrategy);
+goog.swlib.router.registerRoute(new RegExp('^https://www.gstatic.com/firebasejs/3.7.2/firebase.js'), cdnCacheStrategy);
+goog.swlib.router.registerRoute('/sw.js', goog.swlib.networkFirst());
+goog.swlib.router.registerRoute('/', goog.swlib.staleWhileRevalidate());
+goog.swlib.router.registerRoute('/index.html', goog.swlib.staleWhileRevalidate());
+goog.swlib.router.registerRoute(new RegExp('.html|.css|.js'), goog.swlib.cacheFirst());
+>>>>>>> 1f2204404ccfdaf3a73b387ec314699dc3021a38

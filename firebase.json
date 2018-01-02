@@ -1,5 +1,23 @@
 {
+<<<<<<< HEAD
   "hosting": {
     "public": "/"
+=======
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "hosting": {
+    "public": "/",
+    "rewrites": [
+      {
+        "source": "!/__/**",
+        "destination": "/index.html"
+      },
+      {
+        "source": "**/!(*.js|*.html|*.css|*.json|*.svg|*.png|*.jpg|*.jpeg)",
+        "destination": "/index.html"
+      }
+    ]
+>>>>>>> 1f2204404ccfdaf3a73b387ec314699dc3021a38
   }
 }

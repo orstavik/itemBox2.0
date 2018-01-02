@@ -1,2 +1,10 @@
+<<<<<<< HEAD
 /bower_components
 /.vscode
+=======
+bower_components/
+.idea/
+.vscode/
+functions/node_modules
+firebase-debug.log
+>>>>>>> 1f2204404ccfdaf3a73b387ec314699dc3021a38
